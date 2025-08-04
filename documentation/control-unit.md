@@ -8,9 +8,9 @@ The way these signals are set or unset is by **checking the codeop bits**. The i
 - **JMP:** If 1, the instruction is a JMP instruction.
 - **FN:** If 1, the instruction is a FN instruction.
 - **MEM:** If 1, the instruction requires access to the data memory.
-- **LD:** If 1, the instruction is a LD instruction. This is connected to the “ld” input
+- **LD:** If 1, the instruction is a LD instruction. This is connected to the "ld" input
 of the data memory, which enables memory reading.
-- **ST:** If 1, the instruction is a ST instruction. This is connected to the “st” input of the data memory, which enables memory writing.
+- **ST:** If 1, the instruction is a ST instruction. This is connected to the "st" input of the data memory, which enables memory writing.
 
 This is a representation of the circuitry of the Control Unit:
 
