@@ -14,6 +14,6 @@ of the data memory, which enables memory reading.
 
 This is a representation of the circuitry of the Control Unit:
 
-![Control Unit](images/control-unit.png)
+![Control Unit](images/cu.png)
 
 In this example, the codeop is **1011**, meaning that it’s a FN instruction, so the **CMP**, **JMP** and **FN** signals turn on.
