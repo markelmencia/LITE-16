@@ -24,3 +24,8 @@ void i_sl(int s1, int amm, int rd, Processor *p) {
     p->reg[rd] = p->reg[s1] << amm;
     p->pc++;
 }
+
+void i_srl(int s1, int amm, int rd, Processor *p) {
+    p->reg[rd] = p->reg[s1] >> amm;
+    p->pc++;
+}
