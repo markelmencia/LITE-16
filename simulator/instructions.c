@@ -35,3 +35,5 @@ void i_sra(int s1, int amm, int rd, Processor *p) {
     p->reg[rd] = p->reg[s1] >> amm | msb;
     p->pc++;
 }
+
+void i_syscall(int s1, int s2, int rd, Processor *p) {}
