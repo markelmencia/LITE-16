@@ -66,3 +66,9 @@ void i_fn(int rd, int roff, Processor *p) {
     p->reg[rd] = p->pc + 1;
     p->pc = p->pc + p->reg[roff];
 }
+
+void i_mv(int lo, int hi, int rd, Processor *p) {
+    int v = hi << 4 | lo;
+    p->reg[rd] = p->reg[rd] + v;
+    p->pc++;
+}
