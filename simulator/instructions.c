@@ -72,3 +72,9 @@ void i_mv(int lo, int hi, int rd, Processor *p) {
     p->reg[rd] = p->reg[rd] + v;
     p->pc++;
 }
+
+void i_mvu(int lo, int hi, int rd, Processor *p) {
+    int v = hi << 4 | lo;
+    p->reg[rd] = v << 8;
+    p->pc++;
+}
