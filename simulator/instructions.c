@@ -45,3 +45,11 @@ void i_je(int a, int b, int roff, Processor *p) {
         p->pc++;
     }
 }
+
+void i_jl(int a, int b, int roff, Processor *p) {
+    if (p->reg[a] < p->reg[b]) {
+        p->pc = p->pc + p->reg[roff];
+    } else {
+        p->pc++;
+    }
+}
