@@ -37,3 +37,11 @@ void i_sra(int s1, int amm, int rd, Processor *p) {
 }
 
 void i_syscall(int s1, int s2, int rd, Processor *p) {}
+
+void i_je(int a, int b, int roff, Processor *p) {
+    if (p->reg[a] == p->reg[b]) {
+        p->pc = p->pc + p->reg[roff];
+    } else {
+        p->pc++;
+    }
+}
