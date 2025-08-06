@@ -16,9 +16,9 @@ MISC Instructions are instructions that **operate with the data memory** or **lo
 | `or`        | rd<-s1\|s2; pc<-pc+1    | 0b0001 |   s1   |   s2   |   rd   |
 | `xor`       | rd<-s1^s2; pc<-pc+1     | 0b0010 |   s1   |   s2   |   rd   |
 | `and`       | rd<-s1&s2; pc<-pc+1     | 0b0011 |   s1   |   s2   |   rd   |
-| `sl`        | rd<-s1<<s2; pc<-pc+1    | 0b0100 |   s1   |  dist  |   rd   |
-| `srl`       | rd<-s1>>s2; pc<-pc+1    | 0b0101 |   s1   |  dist  |   rd   |
-| `sra`       | rd<-s1>>>s2; pc<-pc+1   | 0b0110 |   s1   |  dist  |   rd   |
+| `sl`        | rd<-s1<<s2; pc<-pc+1    | 0b0100 |   s1   |  amm  |   rd   |
+| `srl`       | rd<-s1>>s2; pc<-pc+1    | 0b0101 |   s1   |  amm  |   rd   |
+| `sra`       | rd<-s1>>>s2; pc<-pc+1   | 0b0110 |   s1   |  amm  |   rd   |
 | `syscall`   | (invokes syscall)       | 0b0111 |   s1   |   s2   |   s3   |
 | `je`        | pc<-pc+(A==B)?roff:1    | 0b1000 |   A    |   B    |  roff  |
 | `jl`        | pc<-pc+(A<B)?roff:1     | 0b1001 |   A    |   B    |  roff  |
