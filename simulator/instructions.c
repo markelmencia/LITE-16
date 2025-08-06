@@ -61,3 +61,8 @@ void i_jg(int a, int b, int roff, Processor *p) {
         p->pc++;
     }
 }
+
+void i_fn(int rd, int roff, Processor *p) {
+    p->reg[rd] = p->pc + 1;
+    p->pc = p->pc + p->reg[roff];
+}
