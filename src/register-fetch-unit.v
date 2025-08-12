@@ -3,6 +3,7 @@
 
 module register_fetch_unit(
     input wire clk,
+    input wire rst,
     input wire [3:0] i4_7, // Instruction bits 4 to 7
     input wire [3:0] i8_11, // Instruction bits 8 to 11
     input wire [3:0] i12_15, // Instruction bits 12 to 15
@@ -25,16 +26,16 @@ module register_fetch_unit(
     // The output of the register file.
     wire [(16*16)-1:0] rf_out;
     
-    register_file rf (clk, r, en, rf_out);
+    register_file rf (clk, rst, r, en, rf_out);
     
 
     // Generates an 16-register array, which is essentially
     // the register bank.
     reg [15:0] rf_array [0:15];
-    genvar j;
+    genvar i;
     generate
-    for (j = 0; j < 16; j = j + 1) begin : array
-        always @(*) rf_array[j] = rf_out[j*16 +: 16];
+    for (i = 0; i < 16; i = i + 1) begin : array
+        always @(*) rf_array[i] = rf_out[i*16 +: 16];
     end
     endgenerate
 
@@ -63,7 +64,7 @@ module register_fetch_unit(
             b = rf_array[i8_11];
         end
     end
-    
+
 endmodule
 
 
@@ -73,6 +74,7 @@ module register_file #(
     parameter REGISTER_COUNT = 16
 )(
     input wire clk,
+    input wire rst,
     input wire [15:0] data_in,
     input wire [REGISTER_COUNT-1:0] en,
     output wire [(16*16)-1:0] data_out
@@ -84,6 +86,7 @@ module register_file #(
         for (i = 0; i < REGISTER_COUNT; i = i + 1) begin : reg_array
             register reg_u (
                 .clk(clk),
+                .rst(rst),
                 .en(en[i]),
                 .data_in(data_in),
                 .data_out(data_out[(i*16) + 15 : (i*16)])

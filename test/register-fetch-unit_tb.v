@@ -5,6 +5,7 @@
 module register_fetch_unit_tb;
 
     reg clk;
+    reg rst;
     reg [3:0] i4_7; // Instruction bits 4 to 7
     reg [3:0] i8_11; // Instruction bits 8 to 11
     reg [3:0] i12_15; // Instruction bits 12 to 15
@@ -17,7 +18,7 @@ module register_fetch_unit_tb;
     wire [15:0] a;
     wire [15:0] b;
 
-    register_fetch_unit rfu(clk, i4_7, i8_11, i12_15, r, ri, st, jmp, fn, a, b);
+    register_fetch_unit rfu(clk, rst, i4_7, i8_11, i12_15, r, ri, st, jmp, fn, a, b);
 
     initial clk = 0;
     always #5 clk = ~clk;
@@ -25,6 +26,8 @@ module register_fetch_unit_tb;
     initial begin
         $dumpfile("register_fetch_unit_tb.vcd");
         $dumpvars(0, rfu);
+
+        rst = 0;
 
         fn = 0;
         jmp = 0;
@@ -59,17 +62,18 @@ module register_fetch_unit_tb;
         #10;
         $finish;
     end
-    
+
 endmodule
 
 module register_file_tb;
 
     reg clk;
+    reg rst;
     reg [15:0] data_in;
     reg [16-1:0] en;
     wire [(16*16)-1:0] data_out;
 
-    register_file rf(clk, data_in, en, data_out);
+    register_file rf(clk, rst, data_in, en, data_out);
 
     initial clk = 0;
     always #5 clk = ~clk;
@@ -77,6 +81,8 @@ module register_file_tb;
     initial begin
         $dumpfile("register_file_tb.vcd");
         $dumpvars(0, rf);
+        rst = 0;
+
         en = 16'hFFFF;
         data_in = 16'h0000;
         #15
