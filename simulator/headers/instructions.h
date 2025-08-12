@@ -1,3 +1,6 @@
+#ifndef INSTRUCTIONS_H_
+#define INSTRUCTIONS_H_
+
 #include "processor.h"
 #include <stdint.h>
 
@@ -17,3 +20,5 @@ void i_ld(uint16_t addr, int rd, Processor *p);
 void i_st(uint16_t addr, int s, Processor *p);
 void i_mv(int lo, int hi, int rd, Processor *p);
 void i_mvu(int lo, int hi, int rd, Processor *p);
+
+#endif

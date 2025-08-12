@@ -1,3 +1,6 @@
+#ifndef PROCESSOR_H_
+#define PROCESSOR_H_
+
 #include <stdint.h>
 
 #define INTEGER_LIMIT 65536
@@ -9,3 +12,5 @@ typedef struct {
     uint16_t reg[REG_COUNT];
     uint16_t pc;
 } Processor;
+
+#endif
