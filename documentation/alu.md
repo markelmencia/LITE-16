@@ -1,5 +1,5 @@
 # Arithmetic Logic Unit
-The ALU has two main outputs: **R** and **CMP**. R is **the result of the operation** specified at the last three bits of the codeop. CMP has three outputs: **lower, equal or higher**, but only one of them is sent as output, depending on the JMP operation. Here’s the circuit:
+The ALU has two main outputs: **R** and **CMP**. R is **the result of the operation** specified at the first three bits of the codeop. CMP has three outputs: **lower, equal or higher**, but only one of them is sent as output, depending on the JMP operation. Here’s the circuit:
 
 ![ALU](images/alu.png)
 
