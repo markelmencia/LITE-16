@@ -4,7 +4,7 @@
 
 ![Program Counter](images/pc.png)
 
-The PC is directly connected to the **address input of the Program Memory**, and it will update (PC + 1) each tick of the clock. The output of the Program Memory is t**he instruction to be executed**, whose segments go to their respective multiplexers and the CU. The multiplexer that can be seen below the PC dictates whether the PC updates to the jump address or to the next immediate instruction. The jump address is selected if the instruction is a **JMP type** and if the CMP bit taken out of the ALU is set.
+The PC is directly connected to the **address input of the Program Memory**, and it will update (PC + 1) each tick of the clock. The output of the Program Memory is **the instruction to be executed**, whose segments go to their respective multiplexers and the CU. The multiplexer that can be seen below the PC dictates whether the PC updates to the jump address or to the next immediate instruction. The jump address is selected if the instruction is a **JMP type** and if the CMP bit taken out of the ALU is set.
 
 ## Data Memory
 
