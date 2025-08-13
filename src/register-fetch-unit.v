@@ -14,7 +14,8 @@ module register_fetch_unit(
     input wire fn,
 
     output reg [15:0] a,
-    output reg [15:0] b
+    output reg [15:0] b,
+    output reg [15:0] rd
     );
 
     // Bound to en, is set if the current instruction should store
@@ -63,6 +64,9 @@ module register_fetch_unit(
             a = rf_array[i4_7];
             b = rf_array[i8_11];
         end
+
+        /* rd */
+        rd = rf_array[i12_15];
     end
 
 endmodule

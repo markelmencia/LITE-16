@@ -17,8 +17,9 @@ module register_fetch_unit_tb;
 
     wire [15:0] a;
     wire [15:0] b;
+    wire [15:0] rd;
 
-    register_fetch_unit rfu(clk, rst, i4_7, i8_11, i12_15, r, ri, st, jmp, fn, a, b);
+    register_fetch_unit rfu(clk, rst, i4_7, i8_11, i12_15, r, ri, st, jmp, fn, a, b, rd);
 
     initial clk = 0;
     always #5 clk = ~clk;
