@@ -1,4 +1,5 @@
 // Implementation of the LITE-16 Arithmetic Logic Unit
+`timescale 1ns/1ps
 
 module alu_tb;
 
