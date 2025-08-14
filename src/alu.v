@@ -5,7 +5,9 @@ module alu(
     input wire [15:0] a,
     input wire [15:0] b,
     input wire [15:0] rd,
+    input wire [15:0] pc,
     input wire ri,
+    input wire jmp,
     
     output reg [15:0] r,
     output reg cmp
@@ -37,6 +39,10 @@ module alu(
             r = r1;
         end else begin
             r = r0;
+        end
+
+        if (jmp) begin
+            r = pc + 1;
         end
 
         /* CMP */
