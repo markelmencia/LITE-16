@@ -1,4 +1,4 @@
-// Register testbench
+// Control Unit testbench
 `timescale 1ns/1ps
 
 module control_unit_tb;
