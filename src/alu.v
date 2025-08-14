@@ -6,7 +6,9 @@ module alu(
     input wire [15:0] b,
     input wire [15:0] rd,
     input wire [15:0] pc,
+    input wire [15:0] data_mem_out,
     input wire ri,
+    input wire ld,
     input wire jmp,
     
     output reg [15:0] r,
@@ -39,6 +41,10 @@ module alu(
             r = r1;
         end else begin
             r = r0;
+        end
+
+        if (ld) begin
+            r = data_mem_out;
         end
 
         if (jmp) begin
