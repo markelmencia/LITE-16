@@ -59,7 +59,7 @@ module register_fetch_unit(
         /* A AND B OUTPUTS */
         if (ri) begin
             a = {12'b0, i4_7};
-            b = {i8_11, 12'b0};
+            b = {8'b0, i8_11, 4'b0};
         end else begin
             a = rf_array[i4_7];
             b = rf_array[i8_11];
