@@ -1,4 +1,4 @@
-// Implementation of a LITE-16 register
+// Register testbench
 `timescale 1ns/1ps
 
 module register_tb;

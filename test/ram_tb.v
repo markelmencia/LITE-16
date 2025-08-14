@@ -1,4 +1,4 @@
-// Implementation of the LITE-16 data memory (RAM)
+// RAM testbench
 `timescale 1ns/1ps
 
 module ram_tb;

@@ -1,7 +1,7 @@
-// Implementation of a LITE-16 register
+// Register testbench
 `timescale 1ns/1ps
 
-module register_tb;
+module control_unit_tb;
 
     reg [3:0] codeop;
     wire ri;

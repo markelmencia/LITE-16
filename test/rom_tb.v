@@ -1,4 +1,4 @@
-// Implementation of the LITE-16 Program memory (ROM)
+// Program memory testbench
 `timescale 1ns/1ps
 
 module rom_tb;

@@ -1,6 +1,5 @@
-// Implementation of the LITE-16 Register Fetch Unit
+// RFU and Register File testbench
 `timescale 1ns/1ps
-
 
 module register_fetch_unit_tb;
 

@@ -1,4 +1,4 @@
-// Implementation of the LITE-16 Arithmetic Logic Unit
+// ALU testbench
 `timescale 1ns/1ps
 
 module alu_tb;
@@ -7,7 +7,9 @@ module alu_tb;
     reg [15:0] a;
     reg [15:0] b;
     reg [15:0] rd;
+    reg[15:0] pc;
     reg ri;
+    reg jmp;
     wire [15:0] r;
     wire cmp;
 
