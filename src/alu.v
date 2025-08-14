@@ -32,9 +32,9 @@ module alu(
         endcase
 
         if (codeop[0]) begin
-            r1 = (a + b) + rd; // mv
-        end else begin
             r1 = (a + b) << 8; // mvu
+        end else begin
+            r1 = (a + b) + rd; // mv
         end
 
         if (ri) begin
