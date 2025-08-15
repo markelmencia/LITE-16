@@ -27,7 +27,7 @@ module alu(
             3'b011: r0 = a & b;
             3'b100: r0 = a << b;
             3'b101: r0 = a >> b;
-            3'b110: r0 = a >>> b;
+            3'b110: r0 = $signed(a) >>> b;
             3'b111: r0 = a + b; // will concatenate
         endcase
 
