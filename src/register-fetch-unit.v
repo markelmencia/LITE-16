@@ -15,6 +15,7 @@ module register_fetch_unit(
 
     output reg [15:0] a,
     output reg [15:0] b,
+    output reg [15:0] s2,
     output reg [15:0] rd
     );
 
@@ -65,8 +66,9 @@ module register_fetch_unit(
             b = rf_array[i8_11];
         end
 
-        /* rd */
+        /* rd and s2 */
         rd = rf_array[i12_15];
+        s2 = rf_array[i8_11];
     end
 
 endmodule
