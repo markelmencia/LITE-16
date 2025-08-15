@@ -1,6 +1,9 @@
 // Implementation of the LITE-16 Program Counter, clock and memory
 
-module pc (
+module pc #(
+    parameter ROM_FILE = "test/roms/romtest.hex",
+    parameter FULL_MEM = 0
+    )(
     input wire clk,
     input wire rst,
     input wire jmp,
@@ -14,7 +17,7 @@ module pc (
     reg [15:0] pc_in;
 
     register pc(clk, rst, clk, pc_in, pc_out);
-    rom pm(pc_out, instruction);
+    rom #(ROM_FILE, FULL_MEM) pm(pc_out, instruction);
 
     always @(*) begin
         if (cmp && jmp) begin

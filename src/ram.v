@@ -1,6 +1,9 @@
 // Implementation of the LITE-16 data memory (RAM)
 
-module ram(
+module ram #(
+    parameter FULL_MEM = 0,
+    parameter MEM_SIZE = (FULL_MEM ? 65535 : 127)
+    )(
     input wire clk,
     input wire [15:0] address,
     input wire [15:0] data_in,
@@ -10,11 +13,11 @@ module ram(
     output reg [15:0] data_out
     );
 
-    reg [15:0] data [0:127];
+    reg [15:0] data [0:MEM_SIZE];
 
     initial begin
         // Initializes data to zero
-        for (integer i = 0; i < 127; i = i + 1) begin
+        for (integer i = 0; i < MEM_SIZE + 1; i = i + 1) begin
             data[i] = 16'h0000;
         end
     end
