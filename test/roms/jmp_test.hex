@@ -1,0 +1,16 @@
+105E // mv 05, x1 (works)
+202E // mv 02, x2 (works)
+302E // mv 02, x3 (works)
+
+3218 // je x1, x2, x3 (works)
+3219 // jl x1, x2, x3 (works)
+321A // jg x1, x2, x3 (should jump) (works)
+0000
+340B // fn x4, x3 (should jump) (works)
+0000
+312A // jg x2, x1, x3 (works)
+3129 // jl x2, x1, x3 (should jump) (works)
+0000
+3008 // je x0, x0, x3 (should jump) (works)
+0000
+FFFF // mvu FF, xF (works)

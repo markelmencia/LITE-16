@@ -1,0 +1,17 @@
+1fef // mvu FE, x1 (working)
+1efe // mv EF, x1 (working)
+100f // mvu 00, x1 (working)
+106e // mv 07, x1 (working)
+207e // mv 07, x2 (working)
+3120 // add x2, x1, x3 (working)
+4121 // or x2, x1, x4 (working)
+5122 // xor x2, x1, x5 (working)
+6123 // and x2, x1, x6 (working)
+7124 // sl x2, x1, x7 (working)
+
+600f // mvu 00, x6 (working)
+602e // mv 02, x6 (working)
+
+8615 // srl x1, x6, x8 (working)
+9616 // sra x1, x6, x9 (working)
+A127 // syscall x2, x1, A (working)
