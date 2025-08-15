@@ -10,20 +10,22 @@ module ram(
     output reg [15:0] data_out
     );
 
-    reg [15:0] data [0:65535];
+    reg [15:0] data [0:127];
 
     initial begin
         // Initializes data to zero
-        for (integer i = 0; i < 65536; i = i + 1) begin
+        for (integer i = 0; i < 127; i = i + 1) begin
             data[i] = 16'h0000;
         end
     end
 
-    always @(clk) begin
+    always @(posedge clk) begin
         if (store) begin
             data[address] <= data_in;
         end
+    end
 
+    always @(*) begin
         if (load) begin
             data_out <= data[address];
         end
