@@ -11,11 +11,11 @@ module alu_tb;
     reg [15:0] data_mem_out;
     reg ri;
     reg ld;
-    reg jmp;
+    reg fn;
     wire [15:0] r;
     wire cmp;
 
-    alu alu_tb(codeop, a, b, rd, ri, r, cmp);
+    alu alu_tb(codeop, a, b, rd, ri, ld, fn, r, cmp);
 
     initial begin
         $dumpfile("alu_tb.vcd");
