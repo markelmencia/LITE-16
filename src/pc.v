@@ -18,9 +18,9 @@ module pc (
 
     always @(*) begin
         if (cmp && jmp) begin
-            pc_in <= pc_out + rd;
+            pc_in = pc_out + rd;
         end else begin
-            pc_in <= pc_out + 1;
+            pc_in = pc_out + 1;
         end
     end
     
