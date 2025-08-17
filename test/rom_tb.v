@@ -5,7 +5,7 @@ module rom_tb;
     reg [15:0] address;
     wire [15:0] data_out;
 
-    rom #(.ROM_FILE("test/romtest.hex")) r_tb(address, data_out);
+    rom #(.ROM_FILE("test/roms/romtest.hex")) r_tb(address, data_out);
 
     initial begin
         $dumpfile("rom_tb.vcd");
