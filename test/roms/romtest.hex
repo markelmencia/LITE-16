@@ -1,3 +1,20 @@
-101e 207e 210d 310c 401f 5fff 5fee 6450
-7121 8122 9123 a114 b1a5 c156 a008 0000
-a219 0000 a21a 7f0b
+101e // mv 01, x1
+207e // mv 07, x2
+210d // st x1, x2
+310c // ld x1, x3
+401f // mvu 01, x4
+5fff // mvu FF, x5
+5fee // mv FE, x5
+6450 // add x5, x4, x6
+7121 // or x2, x1, x7
+8122 // xor x2, x1, x8
+9123 // and x2, x1, x9
+a114 // sl, x1, x1, x10
+b1a5 // srl x10, x1, x11
+c156 // sra, x5, x1, x12
+a008 // je x0, x0, x10
+0000 // NOP
+a219 // jl x1, x2, x10
+0000 // NOP
+a21a // jg, x1, x2, x10
+7f0b // fn x15, x7
