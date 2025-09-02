@@ -7,11 +7,11 @@ LITE-16 is a simple **16-bit Instruction Set Architecture** inspired in part by 
 The aim of this ISA is to contain the most fundamental instructions a processor needs to function, while also having a **clear and simple structure** to read and understand. Because of this, I chose to design a **RISC-based** architecture, meaning that every instruction has the same bit length (**16 bits**). To achieve a more homogeneous structure, I also chose to make every instruction segment the same length (four bits), making each and every instruction have **four different segments**.
 
 ## Content
-The content in this repository can be divided in three parts:
+The content in this repository can be divided in four parts:
 
 - **Documentation:** The **technical specification** of the LITE-16 Instruction Set Architecture, located inside the `documentation/` directory.
 
-- **Verilog architecture:** The main part of the project: the **LITE-16 architecture programmed in Verilog**, allowing FPGA (and similiar) simulation, located in `src/`. The repository also contains pre-built testbenches and other testing resources located in `test/`.
+- **Verilog architecture:** The main part of the project: the **LITE-16 architecture programmed in Verilog**, allowing FPGA (and similar) simulation, located in `src/`. The repository also contains pre-built testbenches and other testing resources located in `test/`.
 
 - **Circuit design:** The **electronic architecture design** of LITE-16, designed with [Logisim](http://www.cburch.com/logisim/), an open-source **logic circuit simulator** by Carl Burch. This serves as a visual guide to the logic of the architecture, located in `design/`.
 
